@@ -4,6 +4,8 @@ use utf8;
 use AutoHamster::FoodEater;
 use Data::Dump qw[dump];
 
+my $HAMSTER_NUM = "015";
+
 my @submitters_that_always_forget_to_put_AT_before_name = 
   qw(polusok);
 
@@ -101,9 +103,9 @@ foreach my $item (@feed_items)
     push @{ $content{$current_cat} }, $link;
     
 }
-open my $out, '>:utf8', "output.md";
+open my $out, '>:utf8', "readme.md";
 
-print $out qq[Дайджест полезных ссылок для тестировщиков-автоматизаторов #014 \n\n];
+print $out qq[Дайджест полезных ссылок для тестировщиков-автоматизаторов #$HAMSTER_NUM \n\n];
 print $out qq[<img src="http://automated-testing.info/uploads/default/61/e442078ec743033d.png" width="529" height="136">\n\n];
 
 foreach my $category (@categories_order)
