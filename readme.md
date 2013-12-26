@@ -1,28 +1,39 @@
-Дайджест полезных ссылок для тестировщиков-автоматизаторов #015 
+Дайджест полезных ссылок для тестировщиков-автоматизаторов #016 
 
 <img src="http://automated-testing.info/uploads/default/61/e442078ec743033d.png" width="529" height="136">
 
 ### :new: Интересное на AT.Info
-* [Тестовый SMTP сервер для проверки отправки почты](http://automated-testing.info/t/testovyj-smtp-server-dlya-proverki-otpravki-pochty/3859)  <br><small><font color="gray">Python</font></small><br>Что нам стоит, свой SMTP сервер построить?<br><br>
-* [Тестирование Email с Mailcatcher](http://automated-testing.info/t/testirovanie-email-s-mailcatcher/3870)  <br><small><font color="gray"></font></small><br>О тестовом SMTP сервере с API и блэкджеком<br><br>
-* [TestComplete Cookbook](http://automated-testing.info/t/testcomplete-cookbook/3878) (Прислал(-а): @dzhariy) <br><small><font color="gray">Автоматизация тестирования, TestComplete </font></small><br>Книга, написанная Геной Алпаевым @karkadil, посвящена рецептам приготовления вкусной автоматизации на TestComplete <br><br>
-* [ Тестируем верстку для адаптивного сайта с помощью Galen Framework](http://automated-testing.info/t/testiruem-verstku-dlya-adaptivnogo-sajta-s-pomoshhyu-galen-framework/3884) (Прислал(-а): @ishubin) <br><small><font color="gray">Автоматизация тестирования, UI, CSS, Layout, Верстка</font></small><br>Тестирование верстки сайта - довольно известная проблема и существуют разные методы ее решения. В этой статье я бы хотел представить еще один способ автоматизации с помощью Galen Framework.<br><br>
+* [Анонс: релиз SWD Page Recorder, который записывает PageObject’ы теперь с поддержкой фреймов](http://automated-testing.info/t/anons-reliz-swd-page-recorder-kotoryj-zapisyvaet-pageobject-y-teper-s-podderzhkoj-frejmov/3895) (Прислал(-а): @dzhariy) <br><small><font color="gray">Java, C#, Python, Ruby, Perl, WebDriver, Web</font></small><br>Свежий бета-релиз инструмента, позволяющего записать и генерировать Page Object-классы и теперь с поддержкой фреймов и всплывающих окон. <br><br>
 
 
 ### :paperclip: Статьи по автоматизации тестирования
-* [Тестирование верстки 2](http://adeptqa.blogspot.com/2013/12/2.html) (Прислал(-а): @dzhariy) <br><small><font color="gray">Java, WebDriver, Web</font></small><br>FightingLayoutBugs для тестирования верстки<br><br>
-* [Why do we need automation?](http://technologyconversations.wordpress.com/2013/12/16/why-do-we-need-automation/)  <br><small><font color="gray">Автоматизация тестирования, Agile</font></small><br>Небольшое размышление об автоматизации тестирования и автоматизации проверок в Agile<br><br>
-* [Будущее C#](http://habrahabr.ru/post/206356/) (Прислал(-а): @dzhariy) <br><small><font color="gray">Код, C#</font></small><br>Если кратко, то скоро синтаксис C# станет еще круче Java. Всегда был, и станет еще круче :clap:<br><br>
-* [Автоматизация тестирования Android приложений с помощью UIAutomator](http://habrahabr.ru/company/intel/blog/205864/) (Прислал(-а): @dzhariy) <br><small><font color="gray">Автоматизация тестирования, Mobile, Android</font></small><br>Отличная статья с примерами и пояснениями<br><br>
-* [Failure Story #2– This App Will Never Be Automated](http://www.testthisblog.com/2013/11/failure-story-2-this-app-will-never-be.html) (Прислал(-а): @dzhariy) <br><small><font color="gray">Автоматизация тестирования, QTP, Failure, Experience, Keyword-Driven</font></small><br>История одного фэйла началась с того, что тестировщик-автоматизатор решил написать свой Keyword-Driven фреймворк с кейвордами в Excel и драйвером, выполняющим команды на QTP. И тут понеслось… <br><br>
-* [Explorative C# Web scripting using scriptcs and FluentAutomation](http://campus.miles.no/2013/12/11/explorative-web-scripting/) (Прислал(-а): @dzhariy) <br><small><font color="gray">Автоматизация тестирования, C#, Web, ScriptCS, JavaScript</font></small><br>I.Expect.Text(text).In("#rso li cite"); - очень похоже на идеи @davert и @asolntsev; Но, намного круче, потому что реализовано на Сишарпе, :trollface: который компилируется в JavaScript. Вот, что может быть круче этого?<br><br>
-* [Test automation don’ts #1 – Separate repositories](http://technicaltesting.wordpress.com/2013/12/04/test-automation-donts-1-separate-repositories/)  <br><small><font color="gray">Автоматизация тестирования</font></small><br>#1 Do not keep automation code in a separate reposity -- кстати, очень важный совет. Скажу по своему опыту -- это так. <br><br>
-* [О чем я расскажу на Selenium Camp 2014 #SeleniumCamp в Киеве](http://blog.zhariy.com/2013/12/selenium-camp-2014-seleniumcamp.html) (Прислал(-а): @dzhariy) <br><small><font color="gray">Автоматизация тестирования, WebDriver</font></small><br>Наглый пиар моего будущего доклада<br><br>
-* [Как написать автоматический тест на алгоритмическую сложность?](http://habrahabr.ru/company/tiktokcoach/blog/206544/) (Прислал(-а): @dzhariy) <br><small><font color="gray"></font></small><br>Это статья для матерых программистов<br><br>
+* [QA & Testing](http://darrellgrainger.blogspot.in) (Прислал(-а): @dzhariy) <br><small><font color="gray">Автоматизация тестирования, WebDriver</font></small><br>Блог, в основном посвящен советам по работе с Selenium WebDriver<br><br>
+* [Elemental Selenium](http://elementalselenium.com/tips) (Прислал(-а): @dzhariy) <br><small><font color="gray">Автоматизация тестирования, Ruby, WebDriver</font></small><br>Архив рассылки с советами по Selenium WebDriver<br><br>
 
 
 ### :wrench: Инструменты
-* [Automatically Generating Multi-Language & Convention Based Test Objects With NAuto](http://weblogs.asp.net/seanmcalinden/archive/2013/12/17/automatically-generating-multi-language-amp-convention-based-test-objects-with-nauto.aspx) (Прислал(-а): @dzhariy) <br><small><font color="gray">Код, C#</font></small><br>Автоматическая генерация данных для автоматизированного тестирования с учетом локализации <br><br>
+* [JaCoCo Java Code Coverage Library](http://www.eclemma.org/jacoco/)  <br><small><font color="gray">Java</font></small><br>Инструмент с открытым исходным кодом для Java, для измерения покрытия кода тестами<br><br>
+* [Behaviour-Driven Development Tool Jasmine 2.0 Released](http://www.infoq.com/news/2013/12/bdd-jasmine-2-released) (Прислал(-а): @dzhariy) <br><small><font color="gray">JavaScript</font></small><br>Релиз известного фреймворка для создания тестов на JavaScript. Теперь все написано на чистом JavaScript + Node.js<br><br>
+* [Arquillian - So you can rule your code. Not the bugs.](http://arquillian.org) (Прислал(-а): @dzhariy) <br><small><font color="gray">Автоматизация тестирования, Java</font></small><br>Какой-то мега-фреймворк на Java для интеграционных тестов в разных контейнерах. Честно, ничего не понял. Но, есть видео. <br><br>
+
+
+### :video_camera: Видео по автоматизации тестирования
+* [Appium. Тестируем гибридные мобильные приложения в стиле Webdriver API](http://www.youtube.com/watch?v=r4NkY_l2tUE&feature=youtu.be&a) (Прислал(-а): @dzhariy) <br><small><font color="gray">Автоматизация тестирования, Mobile, WebDriver, Appium</font></small><br>20-ти (8-ми) минутное видео, после которого вы захотите попробовать Appium для народа<br><br>
+* [Источники информации о Selenium](http://www.youtube.com/watch?v=U5vswT0k_Hs&feature=c4-overview&list=UUVMFyEVvaBDQ3PrExtCH0uw) (Прислал(-а): @dzhariy) <br><small><font color="gray">WebDriver</font></small><br>Читайте тесты... и другие источники, из которых можно почерпнуть информацию о Selenium Webdriver<br><br>
+
+
+### :sparkles: Чудотворный  код
+* [Getting Started with Selenium (Github)](https://github.com/ddavison/getting-started-with-selenium) (Прислал(-а): @dzhariy) <br><small><font color="gray">Java, WebDriver</font></small><br>Демо проект для старта на Selenium WebDriver + Java<br><br>
+
+
+### :loudspeaker: Обсуждения
+* [Как убрать окно при запуске IEDriverServer.exe](http://stackoverflow.com/a/20749904/1126595)  <br><small><font color="gray">C#, WebDriver</font></small><br>Используя InternetExplorerDriverService<br><br>
+* [Как открыть новую табу в браузере на Selenium WebDriver](http://stackoverflow.com/a/9122450/1126595)  <br><small><font color="gray">Java, WebDriver, Web</font></small><br>+ внедрение тэга через JavaScriptExecutor<br><br>
+* [How to automate Java applet?](http://stackoverflow.com/questions/10765682/how-to-automate-java-applet) (Прислал(-а): @dzhariy) <br><small><font color="gray">Автоматизация тестирования, Java, WebDriver</font></small><br>Про автоматизацию Джава-аплетов вместе с Selenium WebDriver<br><br>
+
+
+### :eyes: Слайды, презентации по автоматизации тестирования
+* [Intro to working with Git and Github](http://www.slideshare.net/slideshow/embed_code/27501239) (Прислал(-а): @dzhariy) <br><small><font color="gray">git, github</font></small><br>Как и по какой схеме начать работать с Git и Github для всей команды<br><br>
 
 
 ---------------
