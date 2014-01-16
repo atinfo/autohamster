@@ -1,23 +1,18 @@
-Дайджест полезных ссылок для тестировщиков-автоматизаторов #018 
+Дайджест полезных ссылок для тестировщиков-автоматизаторов #019 
 
 <img src="http://automated-testing.info/uploads/default/61/e442078ec743033d.png" width="529" height="136">
 
 ### :paperclip: Статьи по автоматизации тестирования
-* [Учебник по TestComplete](http://tctutorial.ru) (Прислал(-а): @dzhariy) <br><small><font color="gray">Автоматизация тестирования, TestComplete</font></small><br>Случайно нашел учебник по TestComplete. И автор, как вы думаете, кто? Дык, @karkadil<br><br>
-* [Автоматизация тестирования Prom.UA на примере Java и JBehave](http://dou.ua/forums/topic/8915/?from=comment-digest&utm_source=transactional&utm_medium=email&utm_campaign=digest-comments) (Прислал(-а): @heartwilltell) <br><small><font color="gray">Автоматизация тестирования, Java, WebDriver, Web</font></small><br>Некоторое время назад у меня появилось желание попробовать на Java написать простенькое приложение для тестирования веб-интерфейса Prom.UA, которое бы следовало популярному сегодня направлению разработки приложений — BDD (Behavior-Driven Development). И в этой статье я хочу поделиться своей находкой в этом направлении.<br><br>
-* [Git Tutorials and Training](https://www.atlassian.com/git) (Прислал(-а): @polusok) <br><small><font color="gray">Git</font></small><br>Учимся работать с Git. Простые и понятные объяснения от Atlassian.<br><br>
+* [Guide to Mocking in Python for Better Unit Tests](http://www.toptal.com/python/an-introduction-to-mocking-in-python?utm_source=Python+Weekly+Newsletter&utm_campaign=eb5e81888c-Python_Weekly_Issue_121_January_9_2014&utm_medium=email&utm_term=0_9e26887fc5-eb5e81888c-312534025) (Прислал(-а): @polusok) <br><small><font color="gray">Python, Unit testing</font></small><br>Как работать с mock объектами в python 3.3 или модулем Mock.<br><br>
+* [Maintainable automated tests – the architecture view](http://www.shino.de/2014/01/16/maintainable-automated-tests-the-architecture-view/) (Прислал(-а): @dzhariy) <br><small><font color="gray">Автоматизация тестирования</font></small><br>Многослованая идея о том, что Legacy приложения лучше покрывать тестами исходя из бизнес логики <br><br>
 
 
 ### :wrench: Инструменты
-* [automated-screenshot-diff](https://github.com/igorescobar/automated-screenshot-diff)  <br><small><font color="gray">Images, NodeJS</font></small><br>Утилита позволяет сравнивать 2 скриншота и выводить diff после попиксельного сравнения<br><br>
+* [pabot 0.1 - a parallel runner for Robot Framework released!](https://github.com/mkorpela/pabot) (Прислал(-а): @polusok) <br><small><font color="gray">Python</font></small><br>Параллельное выполнение тестов для RobotFramework<br><br>
 
 
-### :loudspeaker: Обсуждения
-* [Headless Browser and scraping - solutions](http://stackoverflow.com/questions/18539491/headless-browser-and-scraping-solutions) (Прислал(-а): @dzhariy) <br><small><font color="gray">Автоматизация тестирования</font></small><br>Список безголовых инструментов браузерного тестирования, т.е. тех, которые не запускают окно браузера для тестирования<br><br>
-
-
-### :horse: И другое
-* [Free programming books](https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md) (Прислал(-а): @polusok) <br><small><font color="gray">Java, C#, Python, Ruby, Perl</font></small><br>Бесплатные книги и ресурсы по программированию. Учимся!<br><br>
+### :sparkles: Чудотворный  код
+* [Pabot](https://github.com/mkorpela/pabot) (Прислал(-а): @DmitriyZverev) <br><small><font color="gray">Код, Python</font></small><br>Инструмент для параллельного выполнения тест кейсов Robot Framework от его создателей.<br><br>
 
 
 ---------------

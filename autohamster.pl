@@ -4,7 +4,7 @@ use utf8;
 use AutoHamster::FoodEater;
 use Data::Dump qw[dump];
 
-my $HAMSTER_NUM = "018";
+my $HAMSTER_NUM = "019";
 
 my @submitters_that_always_forget_to_put_AT_before_name = 
   qw(polusok);
