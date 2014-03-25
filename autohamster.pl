@@ -4,7 +4,7 @@ use utf8;
 use AutoHamster::FoodEater;
 use Data::Dump qw[dump];
 
-my $HAMSTER_NUM = "022";
+my $HAMSTER_NUM = "028";
 
 my @submitters_that_always_forget_to_put_AT_before_name = 
   qw(polusok);
@@ -136,6 +136,10 @@ print $out <<EOF;
 
 И еще, **хотите добавить ссылку** в следующий дайджест?<br>
 Тогда – **[сделайте это через специальную форму!](http://goo.gl/p8JpCx)** (Это – просто)   
+
+И это ещё не всё! У нас и букмарклет есть, для быстрого добавления ссылок!   
+Просто, зайдите на **[страницу букмарклета](http://dzhariy.github.io/at-info/special/hamster.html)** и перетащите ссылку в ваши закладки в браузере.  
+После чего, нажимая на кнопку "+Atinfo.Hamster" – Вы сможете быстро добавить текущую страницу в следующий выпуск Автохомяка.   
 
 ---------
 Смотрите также: [(Анонс) Automated Hamster: Ссылки для Автоматизаторов](http://automated-testing.info/t/anons-automated-hamster-ssylki-dlya-avtomatizatorov/3399)
