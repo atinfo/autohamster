@@ -4,7 +4,7 @@ use utf8;
 use AutoHamster::FoodEater;
 use Data::Dump qw[dump];
 
-my $HAMSTER_NUM = "028";
+my $HAMSTER_NUM = "029";
 
 my @submitters_that_always_forget_to_put_AT_before_name = 
   qw(polusok);
@@ -46,9 +46,31 @@ my @feed_items = eat("food.txt");
 
 my %content;
 
+
+#   ________________________________
+#  < After a short discussion with  >
+#  < @DmitriyZverev and @polusok    >
+#  < I've decided to verify the     >
+#  < unique links. Thank to         >
+#  < @DmitriyZverev for inspiring   >
+#  < pull request.                  >
+#   --------------------------------
+#                         /
+#                       /
+#                c._
+#      ."````"-"C  o'-.
+#    _/   \       _..'
+#   '-\  _/--.<<-'
+#      `\)     \)  jgs
+#
+
+my %all_urls;
+my $row = 0;
+
 foreach my $item (@feed_items) 
 {
-    
+    $row++;
+
     my $current_cat = $cat_other;
     my $item_cat = $item->{'category'};
 
@@ -60,7 +82,15 @@ foreach my $item (@feed_items)
         }
     }
 
+    my $url = $item->{'url'};
 
+    $all_urls{$url} = defined $all_urls{$url} ? $all_urls{$url} + 1 : 1;
+    if ($all_urls{$url} > 1) 
+    {
+        warn "Found not unique link at row: $row:\n";
+        warn "$url\n\n";
+    }
+    
     my $link = { 
                   title       => $item->{'title'},
                   url         => $item->{'url'},
@@ -137,7 +167,7 @@ print $out <<EOF;
 И еще, **хотите добавить ссылку** в следующий дайджест?<br>
 Тогда – **[сделайте это через специальную форму!](http://goo.gl/p8JpCx)** (Это – просто)   
 
-И это ещё не всё! У нас и букмарклет есть, для быстрого добавления ссылок!   
+И это ещё не всё! У нас и **букмарклет** есть, для быстрого добавления ссылок!   
 Просто, зайдите на **[страницу букмарклета](http://dzhariy.github.io/at-info/special/hamster.html)** и перетащите ссылку в ваши закладки в браузере.  
 После чего, нажимая на кнопку "+Atinfo.Hamster" – Вы сможете быстро добавить текущую страницу в следующий выпуск Автохомяка.   
 

@@ -1,20 +1,27 @@
-Дайджест полезных ссылок для тестировщиков-автоматизаторов #028 
+Дайджест полезных ссылок для тестировщиков-автоматизаторов #029 
 
 <img src="http://automated-testing.info/uploads/default/61/e442078ec743033d.png" width="529" height="136">
 
-### :new: Интересное на AT.Info
-* [Инструменты для тестирования Android и iOS приложений](http://automated-testing.info/t/instrumenty-dlya-testirovaniya-android-i-ios-prilozhenij/4326)  <br><small><font color="gray">Java, Mobile</font></small><br>Что выбрать: appium, Espresso, UiAutomator, Robotium?<br><br>
-
-
 ### :paperclip: Статьи по автоматизации тестирования
-* [Как эффективнее изучать джаву?](http://www.apofig.com/2014/03/blog-post_18.html) (Прислал(-а): @dzhariy) <br><small><font color="gray">Java</font></small><br>Ты приходишь на работу сутра во сколько? Cтарайся прийти немного раньше и первым делом сесть за джаву. Выбери себе какую-то задачку по душе, быть может чето посортировать надо на винте, или игрульку какую-то хотел написать, или какую-то коллекцию собираешь и хочешь свой каталог сделать - что нибудь для себя. <br><br>
-* [The Thucydides Reference Manual](http://thucydides.info/docs/thucydides-one-page/thucydides.html)  <br><small><font color="gray">Java</font></small><br>Повезная информация по Thucydides<br><br>
-* [Карьера в IT: должность QA Automation engineer](http://dou.ua/lenta/articles/qa-automation-engineer-position/?utm_source=20140325&utm_medium=email&utm_campaign=CM)  <br><small><font color="gray">Автоматизация тестирования</font></small><br>Обзорная статья, кто такой автоматизатор. А действительно, кто?!<br><br>
+* [Buddycloud Blog - Using Docker with Github and Jenkins for repeatable deployments](http://blog.buddycloud.com/post/80771409167/using-docker-with-github-and-jenkins-for-repeatable?utm_term=0_c0995b6e8f-a4320fc137-235720153&utm_reader=feedly&utm_content=buffer26d56&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)  <br><small><font color="gray">Автоматизация тестирования</font></small><br>Как настроить свою среду непрерывной интеграции вместе с Docker, Github и Jenkins<br><br>
+* [A Docker Maven Plugin for Integration Testing | Java Code Geeks](http://www.javacodegeeks.com/2014/04/a-docker-maven-plugin-for-integration-testing.html?utm_content=buffer707f4&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer) (Прислал(-а): @dzhariy) <br><small><font color="gray">Автоматизация тестирования, Java</font></small><br>И еще статья про создание своего локального облака для тестирования при помощи Докер<br><br>
+* [Measure W3C navigation timings with RSelenium](http://pmsangal.tumblr.com/post/81462772356/measure-w3c-navigation-timings-with-rselenium) (Прислал(-а): @dzhariy) <br><small><font color="gray">Автоматизация тестирования, WebDriver, R (Language)</font></small><br>Об использовании Selenium WebDriver на... чем бы вы думали? На языке R!<br><br>
 
 
 ### :wrench: Инструменты
-* [DDT (Data-Driven Tests)](https://github.com/txels/ddt) (Прислал(-а): @Dmitriy.Zverev) <br><small><font color="gray">Python</font></small><br>Использование наборов данных для Data-Driven тестирования  в Python<br><br>
-* [Node.js Tools for Visual Studio - Home](http://nodejstools.codeplex.com/) (Прислал(-а): @dzhariy) <br><small><font color="gray">JavaScript, NodeJS</font></small><br>А тем временем, вместе с NodeJS могут вполне комфортно работать пользователи Visual Studio<br><br>
+* [Selenium 2.41.0](https://code.google.com/p/selenium/source/browse/java/CHANGELOG)  <br><small><font color="gray">Java, WebDriver</font></small><br>Добавили поддержку native events для Firefox 28<br><br>
+* [Генерирует код для WebDriver SetCapability ](https://saucelabs.com/platforms) (Прислал(-а): @dzhariy) <br><small><font color="gray">Автоматизация тестирования, Код, Java, C#, Python, Ruby, WebDriver</font></small><br>На разных языках, для различных браузеров и платформ<br><br>
+* [ProtoTest/ProtoTest.Golem · GitHub](https://github.com/ProtoTest/ProtoTest.Golem) (Прислал(-а): @dzhariy) <br><small><font color="gray">Автоматизация тестирования, C#</font></small><br>Проект фреймворка для .NET с правильной обверткой элементов WebDriver<br><br>
+* [HTTPBuilder](http://groovy.codehaus.org/modules/http-builder/home.html) (Прислал(-а): @olyv) <br><small><font color="gray">Grrovy</font></small><br>Для тех кому надоел SoapUI, а на SoapUI Pro средст не выделяют. HTTPBuilder is one of the ways to manipulate HTTP-based resources using Groovy.<br><br>
+* [Grible - Smart Test Data Storing](http://www.grible.org/) (Прислал(-а): @Barik87) <br><small><font color="gray">Автоматизация тестирования, Test data</font></small><br>Grible - інструмент для зберігання тестових даних для авто тестів. Є можливість зберігати дані в базі (PostgreSQL) і JSON файлах, тобто інструмент крос-платформенний і може застосовуватися з будь-яким фреймворком (web, mobile, desktop). Що довше планується підтримувати автоматизацію, то потрібнішим стає Grible.<br><br>
+* [Looking Glass 2.0: Инструмент записи локаторов и действий пользователя ](http://www.learn-selenium.com/tools/looking-glass) (Прислал(-а): @dzhariy) <br><small><font color="gray">Автоматизация тестирования, WebDriver</font></small><br>Инструмент, подобный по работе Selenium IDE, только умеет работать в разных браузерах, а не только в Firefox<br><br>
+* [Nightwatch.js](http://nightwatchjs.org) (Прислал(-а): @dzhariy) <br><small><font color="gray">Автоматизация тестирования, JavaScript, NodeJS</font></small><br>Фреймворк на JavaScript и NodeJS для тестирования пользовательского интерфейса с Selenium WebDriver. Преимущество -- упрощенный синтаксис по созданию тестовых шагов. <br><br>
+
+
+### :sparkles: Чудотворный  код
+* [BrowserMobProxiy Samples](https://github.com/barancev/selen-confetqa-2013/tree/master/src/test/java/ru/st/confetqa)  <br><small><font color="gray">Автоматизация тестирования, Java, WebDriver</font></small><br>Простые примеры где и как можно пользоваться BrowserMobProxy - bmp<br><br>
+* [Robot Framework Tools](https://bitbucket.org/userzimmermann/robotframework-tools) (Прислал(-а): @polusok) <br><small><font color="gray">Python, RobotFramework</font></small><br>Набор инструментов для удобства разработки библиотек для Robot Framework<br><br>
+* [Python Tools for Robot Framework and Test Libraries.](https://bitbucket.org/userzimmermann/robotframework-tools) (Прислал(-а): @DmitriyZverev) <br><small><font color="gray">Код, Python</font></small><br>Вспомогательные инструменты для создания динамических библиотек Robot Framework<br><br>
 
 
 ---------------
