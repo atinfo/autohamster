@@ -1,27 +1,33 @@
-Дайджест полезных ссылок для тестировщиков-автоматизаторов #029 
+Дайджест полезных ссылок для тестировщиков-автоматизаторов #034 
 
-<img src="http://automated-testing.info/uploads/default/61/e442078ec743033d.png" width="529" height="136">
+<img src="http://automated-testing.info/uploads/default/249/8dc1c6206f895527.png">
 
 ### :paperclip: Статьи по автоматизации тестирования
-* [Buddycloud Blog - Using Docker with Github and Jenkins for repeatable deployments](http://blog.buddycloud.com/post/80771409167/using-docker-with-github-and-jenkins-for-repeatable?utm_term=0_c0995b6e8f-a4320fc137-235720153&utm_reader=feedly&utm_content=buffer26d56&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)  <br><small><font color="gray">Автоматизация тестирования</font></small><br>Как настроить свою среду непрерывной интеграции вместе с Docker, Github и Jenkins<br><br>
-* [A Docker Maven Plugin for Integration Testing | Java Code Geeks](http://www.javacodegeeks.com/2014/04/a-docker-maven-plugin-for-integration-testing.html?utm_content=buffer707f4&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer) (Прислал(-а): @dzhariy) <br><small><font color="gray">Автоматизация тестирования, Java</font></small><br>И еще статья про создание своего локального облака для тестирования при помощи Докер<br><br>
-* [Measure W3C navigation timings with RSelenium](http://pmsangal.tumblr.com/post/81462772356/measure-w3c-navigation-timings-with-rselenium) (Прислал(-а): @dzhariy) <br><small><font color="gray">Автоматизация тестирования, WebDriver, R (Language)</font></small><br>Об использовании Selenium WebDriver на... чем бы вы думали? На языке R!<br><br>
+* [Basic Core Java Interview Questions ](http://www.studyselenium.com/2013/12/basic-core-java-interview-questions.html) (Прислал(-а): @klymhuk_ivan) <br><small><font color="gray">Java</font></small><br>Basic Core Java Interview Questions <br><br>
+* [100 Selenium Interview Questions ](http://www.studyselenium.com/2013/12/100-selenium-interview-questions.html) (Прислал(-а): @klymhuk_ivan) <br><small><font color="gray">Автоматизация тестирования</font></small><br>100 Selenium Interview Questions <br><br>
+* [Meet the uTesters](http://blog.utest.com/2014/05/06/meet-the-utesters-caio-borghoff/) (Прислал(-а): @dwarwood) <br><small><font color="gray">Автоматизация тестирования, Mobile</font></small><br>рубрика Meet the uTesters, вроде раньше не попадалась в этом блоге.  интервью с отдельно взятыми uTester'ами<br><br>
+* [Видеокурс по WebDriver PageObject Java TestNG](https://www.youtube.com/playlist?list=PLgCS-DuBkjvNJXy5sqBlk-Om3iPbjSswc) (Прислал(-а): @dzhariy) <br><small><font color="gray">Автоматизация тестирования, Java, WebDriver</font></small><br>на рiднiй мовi<br><br>
 
 
 ### :wrench: Инструменты
-* [Selenium 2.41.0](https://code.google.com/p/selenium/source/browse/java/CHANGELOG)  <br><small><font color="gray">Java, WebDriver</font></small><br>Добавили поддержку native events для Firefox 28<br><br>
-* [Генерирует код для WebDriver SetCapability ](https://saucelabs.com/platforms) (Прислал(-а): @dzhariy) <br><small><font color="gray">Автоматизация тестирования, Код, Java, C#, Python, Ruby, WebDriver</font></small><br>На разных языках, для различных браузеров и платформ<br><br>
-* [ProtoTest/ProtoTest.Golem · GitHub](https://github.com/ProtoTest/ProtoTest.Golem) (Прислал(-а): @dzhariy) <br><small><font color="gray">Автоматизация тестирования, C#</font></small><br>Проект фреймворка для .NET с правильной обверткой элементов WebDriver<br><br>
-* [HTTPBuilder](http://groovy.codehaus.org/modules/http-builder/home.html) (Прислал(-а): @olyv) <br><small><font color="gray">Grrovy</font></small><br>Для тех кому надоел SoapUI, а на SoapUI Pro средст не выделяют. HTTPBuilder is one of the ways to manipulate HTTP-based resources using Groovy.<br><br>
-* [Grible - Smart Test Data Storing](http://www.grible.org/) (Прислал(-а): @Barik87) <br><small><font color="gray">Автоматизация тестирования, Test data</font></small><br>Grible - інструмент для зберігання тестових даних для авто тестів. Є можливість зберігати дані в базі (PostgreSQL) і JSON файлах, тобто інструмент крос-платформенний і може застосовуватися з будь-яким фреймворком (web, mobile, desktop). Що довше планується підтримувати автоматизацію, то потрібнішим стає Grible.<br><br>
-* [Looking Glass 2.0: Инструмент записи локаторов и действий пользователя ](http://www.learn-selenium.com/tools/looking-glass) (Прислал(-а): @dzhariy) <br><small><font color="gray">Автоматизация тестирования, WebDriver</font></small><br>Инструмент, подобный по работе Selenium IDE, только умеет работать в разных браузерах, а не только в Firefox<br><br>
-* [Nightwatch.js](http://nightwatchjs.org) (Прислал(-а): @dzhariy) <br><small><font color="gray">Автоматизация тестирования, JavaScript, NodeJS</font></small><br>Фреймворк на JavaScript и NodeJS для тестирования пользовательского интерфейса с Selenium WebDriver. Преимущество -- упрощенный синтаксис по созданию тестовых шагов. <br><br>
+* [Результаты выполнения тестов с помощью Allure](http://artkoshelev.github.io/posts/hello-allure/) (Прислал(-а): @klymhuk_ivan) <br><small><font color="gray">Автоматизация тестирования</font></small><br>Собираем результаты выполнения тестов с помощью Allure<br><br>
+* [Appium Release 1.0.0 (Orion)](https://github.com/appium/appium/releases/tag/v1.0.0)  <br><small><font color="gray">Mobile, Appium</font></small><br>Наконец-то выпустили appium версию 1.0<br><br>
+
+
+### :video_camera: Видео по автоматизации тестирования
+* [John-David Dalton: Fearless Browser Test Automation](https://www.youtube.com/watch?v=ropAwyXj3no) (Прислал(-а): @davert) <br><small><font color="gray">Автоматизация тестирования, WebDriver, Web</font></small><br>Browser test automation can be intimidating leaving developers to spend their time manually testing browsers (many times in VMs) or opting to simply not test a range of browsers. John-David Dalton discusses browser test automation, removes the roadblocks/gotchas, and shows lots of awesome things you can do (code coverage, perf testing, tagging, & more).<br><br>
 
 
 ### :sparkles: Чудотворный  код
-* [BrowserMobProxiy Samples](https://github.com/barancev/selen-confetqa-2013/tree/master/src/test/java/ru/st/confetqa)  <br><small><font color="gray">Автоматизация тестирования, Java, WebDriver</font></small><br>Простые примеры где и как можно пользоваться BrowserMobProxy - bmp<br><br>
-* [Robot Framework Tools](https://bitbucket.org/userzimmermann/robotframework-tools) (Прислал(-а): @polusok) <br><small><font color="gray">Python, RobotFramework</font></small><br>Набор инструментов для удобства разработки библиотек для Robot Framework<br><br>
-* [Python Tools for Robot Framework and Test Libraries.](https://bitbucket.org/userzimmermann/robotframework-tools) (Прислал(-а): @DmitriyZverev) <br><small><font color="gray">Код, Python</font></small><br>Вспомогательные инструменты для создания динамических библиотек Robot Framework<br><br>
+* [Astrolabe is an extension for protractor that adds page objects to your functional/e2e tests](https://github.com/stuplum/astrolabe) (Прислал(-а): @dzhariy) <br><small><font color="gray">Автоматизация тестирования, JavaScript, AngularJS</font></small><br>Используем паттерн PageObject на JavaScript<br><br>
+
+
+### :eyes: Слайды, презентации по автоматизации тестирования
+* [IntelDelta: Слайды, хорошая шпаргалка когда следует внедрять автоматизацию тестирования (PDF)](http://delta.intel-up.org/docs/Delta2014S-T2-L8.pdf) (Прислал(-а): @dzhariy) <br><small><font color="gray">Автоматизация тестирования</font></small><br>Очень кратко о том, когда нужно внедрять автоматизацию и по каким критериям оценить ее пользу и выгоду.<br><br>
+
+
+### :horse: И другое
+* [Вебинар: Deliver Higher Quality Software with Automated end-to-end Testing](http://www.polarion.com/company/events/webinar.php?eventid=558)  <br><br>
 
 
 ---------------
@@ -31,7 +37,7 @@
 И еще, **хотите добавить ссылку** в следующий дайджест?<br>
 Тогда – **[сделайте это через специальную форму!](http://goo.gl/p8JpCx)** (Это – просто)   
 
-И это ещё не всё! У нас и букмарклет есть, для быстрого добавления ссылок!   
+И это ещё не всё! У нас и **букмарклет** есть, для быстрого добавления ссылок!   
 Просто, зайдите на **[страницу букмарклета](http://dzhariy.github.io/at-info/special/hamster.html)** и перетащите ссылку в ваши закладки в браузере.  
 После чего, нажимая на кнопку "+Atinfo.Hamster" – Вы сможете быстро добавить текущую страницу в следующий выпуск Автохомяка.   
 

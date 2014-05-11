@@ -4,7 +4,7 @@ use utf8;
 use AutoHamster::FoodEater;
 use Data::Dump qw[dump];
 
-my $HAMSTER_NUM = "029";
+my $HAMSTER_NUM = "034";
 
 my @submitters_that_always_forget_to_put_AT_before_name = 
   qw(polusok);
@@ -136,7 +136,7 @@ foreach my $item (@feed_items)
 open my $out, '>:utf8', "readme.md";
 
 print $out qq[Дайджест полезных ссылок для тестировщиков-автоматизаторов #$HAMSTER_NUM \n\n];
-print $out qq[<img src="http://automated-testing.info/uploads/default/61/e442078ec743033d.png" width="529" height="136">\n\n];
+print $out qq[<img src="http://automated-testing.info/uploads/default/249/8dc1c6206f895527.png">\n\n];
 
 foreach my $category (@categories_order)
 {
@@ -150,8 +150,16 @@ foreach my $category (@categories_order)
     {
         
         print $out "* [$item->{'title'}]($item->{'url'}) $item->{'submitter'} <br>";
-        print $out "<small><font color=\"gray\">$item->{'tags_line'}</font></small><br>";
-        print $out "$item->{'description'}<br><br>\n";
+        
+        if ($item->{'tags_line'} !~ /^\s*$/) {
+            print $out "<small><font color=\"gray\">$item->{'tags_line'}</font></small><br>";
+        }
+
+        if ($item->{'description'} !~ /^\s*$/) {
+            print $out "$item->{'description'}<br>";
+        }
+
+        print $out "<br>\n";
     }
 
     print $out "\n\n";
