@@ -1,0 +1,1 @@
+start jasmine-node --autotest --color .
