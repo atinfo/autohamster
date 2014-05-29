@@ -66,7 +66,7 @@ var lineWithMultilineComments =
     url:         'http://example.com', 
     description: "\"When I am writting a text...\n\
 - I always put the letters inside\n\
-- I may make it multiline\"\n",
+- I may make it multiline\"",
     
     category:    'Видео',
     tags_line:   'Автоматизация тестирования, Java, Ruby',
@@ -100,6 +100,17 @@ var lineWithOneDoubleQuoteInTitleAndDescription =
     submitter:   '@dzhariy',
 };
 
+var lineWithDoubleQuotesAtStartAndTheEndOfTitle = 
+{
+    date:        '26.05.2014 14:15:39',
+    title:       '\"This line contains double quotes\"', 
+    url:         'http://example.com', 
+    description: 'This is a line with double quotes. < " >',
+    category:    'Видео',
+    tags_line:   'Автоматизация тестирования, Java, Ruby',
+    submitter:   '@dzhariy',
+};
+
 
 function verifyData(actualData, expectedData) {
     expect(actualData.title).      toBe(expectedData.title);       
@@ -112,11 +123,16 @@ function verifyData(actualData, expectedData) {
 }
 
 var DESCRIPTION_FIELD_INDEX = 3;
+var TITLE_FIELD_INDEX = 1;
 var NUMBER_OF_FIELDS = 7;
 
 
 // -- remove quotes if the text is multiline
 // do not remove first and last quotes if the text is singleline
+
+
+//function FoodEater_runNormalizeDataLines
+
 
 describe('FoodEater', function() {
 
@@ -129,9 +145,11 @@ describe('FoodEater', function() {
         
         expect(actualLines.length).toBe(1);
         
-        var expected = 'When I am writting a text...\n\
+               var expected = 'When I am writting a text...\n\
 - I always put the letters inside\n\
-- I may make it multiline';
+- I may make it multiline'; 
+       
+       
         
         var actualData = actualLines[0].split("\t");
         expect(actualData[DESCRIPTION_FIELD_INDEX]).toBe(expected);
@@ -141,7 +159,19 @@ describe('FoodEater', function() {
     
     
     it("NormalizeDataLines should not remove first and last quote from a single line", function() {
-        expect(true).toBe(false);
+        var sourceLine = convertTestDataToSingleLine(lineWithDoubleQuotesAtStartAndTheEndOfTitle);
+        var foodEater = new FoodEater();
+        
+        var actualLines = foodEater.NormalizeDataLines(sourceLine, NUMBER_OF_FIELDS);
+        
+        expect(actualLines.length).toBe(1);
+        
+        var expected = lineWithDoubleQuotesAtStartAndTheEndOfTitle.title;
+        
+        var actualData = actualLines[0].split("\t");
+        expect(actualData[TITLE_FIELD_INDEX]).toBe(expected);
+        
+        
     });
     
     it("eatData should correctly parse and fill the DataLine from raw string", function() {
