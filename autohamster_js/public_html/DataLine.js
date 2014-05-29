@@ -1,4 +1,4 @@
-module.exports = DataLine;
+//module.exports = DataLine;
 
 function DataLine(json) { 
     this.date        = void 0;

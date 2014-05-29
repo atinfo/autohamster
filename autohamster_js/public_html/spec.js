@@ -1,5 +1,5 @@
-var FoodEater = require("./FoodEater.js");
-var DataLine = require("./DataLine.js");
+//var FoodEater = require("./FoodEater.js");
+//var DataLine = require("./DataLine.js");
 
 
 function convertTestDataToSingleLine(data) {
@@ -127,16 +127,9 @@ var TITLE_FIELD_INDEX = 1;
 var NUMBER_OF_FIELDS = 7;
 
 
-// -- remove quotes if the text is multiline
-// do not remove first and last quotes if the text is singleline
-
-
-//function FoodEater_runNormalizeDataLines
-
-
 describe('FoodEater', function() {
 
-   it("NormalizeDataLines should remove first and last quote when the column is has multiline", function() {
+    it("NormalizeDataLines should remove first and last quote when the column is has multiline", function() {
         
         var sourceLine = convertTestDataToSingleLine(lineWithMultilineComments);
         var foodEater = new FoodEater();
@@ -148,8 +141,6 @@ describe('FoodEater', function() {
                var expected = 'When I am writting a text...\n\
 - I always put the letters inside\n\
 - I may make it multiline'; 
-       
-       
         
         var actualData = actualLines[0].split("\t");
         expect(actualData[DESCRIPTION_FIELD_INDEX]).toBe(expected);
@@ -157,6 +148,48 @@ describe('FoodEater', function() {
         
     });    
     
+    it("NormalizeDataLines should handle the apostrophes in the multiline comments ", function() {
+        var sourceLine = convertTestDataToSingleLine(lineWithMultilineCommentsAndDoubleQuoteInsideAndApostrophes);
+        var foodEater = new FoodEater();
+        
+        var actualLines = foodEater.NormalizeDataLines(sourceLine, NUMBER_OF_FIELDS);
+        
+        expect(actualLines.length).toBe(1);
+        
+        var expectedTitle = lineWithMultilineCommentsAndDoubleQuoteInsideAndApostrophes.title;
+        var expectedDescription = 'When I\'d write a text...\n\
+- I\'d always put the letters inside\n\
+- I\'d may make it multiline\n\
+- When I want to quote someone, ""I just do it""' 
+                
+        var actualData = actualLines[0].split("\t");
+        
+        expect(actualData[TITLE_FIELD_INDEX]).toBe(expectedTitle);
+        expect(actualData[DESCRIPTION_FIELD_INDEX]).toBe(expectedDescription);
+    });
+    
+     it("NormalizeDataLines should multilines and quotes in text which has multiple items", function() {
+        var sourceLine1 = convertTestDataToSingleLine(lineWithMultilineCommentsAndDoubleQuoteInsideAndApostrophes);
+        var sourceLine2 = convertTestDataToSingleLine(lineWithMultilineComments);
+        var foodEater = new FoodEater();
+
+        var sourceLine = [sourceLine1, sourceLine2].join(''); 
+        
+        var actualLines = foodEater.NormalizeDataLines(sourceLine, NUMBER_OF_FIELDS);
+        
+        expect(actualLines.length).toBe(2);
+                
+        var expectedTitle1 = lineWithMultilineCommentsAndDoubleQuoteInsideAndApostrophes.title;
+        var expectedDescription1 = 'When I\'d write a text...\n\
+- I\'d always put the letters inside\n\
+- I\'d may make it multiline\n\
+- When I want to quote someone, ""I just do it""' 
+                         
+        var actualData1 = actualLines[0].split("\t");
+        
+        expect(actualData1[TITLE_FIELD_INDEX]).toBe(expectedTitle1);
+        expect(actualData1[DESCRIPTION_FIELD_INDEX]).toBe(expectedDescription1);
+    });   
     
     it("NormalizeDataLines should not remove first and last quote from a single line", function() {
         var sourceLine = convertTestDataToSingleLine(lineWithDoubleQuotesAtStartAndTheEndOfTitle);
@@ -172,7 +205,7 @@ describe('FoodEater', function() {
         expect(actualData[TITLE_FIELD_INDEX]).toBe(expected);
         
         
-    });
+    });   
     
     it("eatData should correctly parse and fill the DataLine from raw string", function() {
               

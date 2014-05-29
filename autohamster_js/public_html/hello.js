@@ -1,6 +1,37 @@
-//DataLine = require("./DataLine.js");
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+module.exports = DataLine;
 
-//module.exports = FoodEater;
+function DataLine(json) { 
+    this.date        = void 0;
+    this.title       = void 0;
+    this.url         = void 0;
+    this.description = void 0;
+    this.category    = void 0;
+    this.tags_line   = void 0;
+    this.submitter   = void 0;
+
+    for(var key in json) {
+        if (!this.hasOwnProperty(key)) {
+            throw "Property " + key + "is not defined at class DataLine";
+        }
+
+        this[key] = json[key];
+    }
+
+} 
+
+
+DataLine.prototype.getDate        = function() { return this.date        }
+DataLine.prototype.getTitle       = function() { return this.title       }
+DataLine.prototype.getUrl         = function() { return this.url         }
+DataLine.prototype.getDescription = function() { return this.description }
+DataLine.prototype.getCategory    = function() { return this.category    }
+DataLine.prototype.getTagsLine    = function() { return this.tags_line   }
+DataLine.prototype.getSubmitter   = function() { return this.submitter   }
+},{}],2:[function(require,module,exports){
+DataLine = require("./DataLine.js");
+
+module.exports = FoodEater;
 
 function FoodEater() 
 {
@@ -40,12 +71,12 @@ FoodEater.prototype.NormalizeDataLines = function(rawData, numberOfFields)
             field = field.replace(/^\s*"|"\s*$/g,'');  
         }
         
-        var isTheLastColumnInTheList = ((i + 1) % numberOfFields) === 0;
+        var isTheLastColumnInTheList = (lines.length % numberOfFields) === 0;
         
         
-        if (isTheLastColumnInTheList)
+        /*if (isTheLastColumnInTheList)
         {
-            var twoFieldsRegExp =  /^[^\r\n]+(\r*\n)[^\r\n]+/g;
+            twoFieldsRegExp =  /^\w+(\r*\n)\w+/g;
             if (twoFieldsRegExp.test(field))
             {
                 var fields = field.split('\n');
@@ -57,7 +88,7 @@ FoodEater.prototype.NormalizeDataLines = function(rawData, numberOfFields)
                 
                 allFields.splice(i + 1, 0, nextField);
             }
-        }
+        }*/
 
         lines.push(field);
         
@@ -111,3 +142,4 @@ FoodEater.prototype.eatData = function (rawDataLines) {
     return result;
 
 }
+},{"./DataLine.js":1}]},{},[2,1])
