@@ -7,27 +7,18 @@ function FoodEater()
 
 }
 
-// TODO: REMOVE
-function countChars(sourceString, character) {
-    var result = 0;
-    for(var i = 0; i < sourceString.length; i++)
-    {
-        if (sourceString.charAt(i) === character)
-        {
-            result++;
-        }
-    }
-    
-    return result;
-}
 
-FoodEater.prototype.NormalizeDataLines = function(rawData, numberOfFields)
+FoodEater.prototype.NormalizeDataLines = function(strRawData, numberOfFields)
 {
+    if (typeof numberOfFields === 'undefined' ||  numberOfFields === null)
+    {
+        throw "FoodEater.prototype.NormalizeDataLines: argument numberOfFields is not defined"
+    }
     var result = [];
     
     var SEPARATOR = "\t";
     
-    var allFields = rawData.split(SEPARATOR);
+    var allFields = strRawData.split(SEPARATOR);
     
     var lines = [];
     
@@ -45,7 +36,7 @@ FoodEater.prototype.NormalizeDataLines = function(rawData, numberOfFields)
         
         if (isTheLastColumnInTheList)
         {
-            var twoFieldsRegExp =  /^[^\r\n]+(\r*\n)[^\r\n]+/g;
+            var twoFieldsRegExp =  /^[^\r\n]*(\r*\n)[^\r\n]+/g;
             if (twoFieldsRegExp.test(field))
             {
                 var fields = field.split('\n');
@@ -65,12 +56,12 @@ FoodEater.prototype.NormalizeDataLines = function(rawData, numberOfFields)
         if (isTheLastColumnInTheList) {
             var normalizedLine = lines.join(SEPARATOR);
             lines = [];
-            result.push(normalizedLine)
+            result.push(normalizedLine);
         }
     }
     
     return result;
-}
+};
 
 
 FoodEater.prototype.eatData = function (rawDataLines) {
@@ -78,7 +69,7 @@ FoodEater.prototype.eatData = function (rawDataLines) {
     if (typeof rawDataLines === "undefined" || rawDataLines === null) {
         throw "Argument dataLines is null or undefined: dataLines == " + rawDataLines.toString();         
     }
-    if (rawDataLines.length == 0) {
+    if (rawDataLines.length === 0) {
         return [];
     }
 
@@ -94,14 +85,14 @@ FoodEater.prototype.eatData = function (rawDataLines) {
 
         var rawDataLine = 
         {
-            date:        columns[0],
-            title:       columns[1], 
-            url:         columns[2], 
-            description: columns[3],
-            category:    columns[4],
-            tags_line:   columns[5],
-            submitter:   columns[6],
-        }
+            date:        columns[0] ? columns[0] : "",
+            title:       columns[1] ? columns[1] : "", 
+            url:         columns[2] ? columns[2] : "", 
+            description: columns[3] ? columns[3] : "",
+            category:    columns[4] ? columns[4] : "",
+            tags_line:   columns[5] ? columns[5] : "",
+            submitter:   columns[6] ? columns[6] : ""
+        };
 
         var resultItem = new DataLine(rawDataLine);
         result.push(resultItem);
@@ -110,4 +101,4 @@ FoodEater.prototype.eatData = function (rawDataLines) {
 
     return result;
 
-}
+};

@@ -1,6 +1,3 @@
-//var FoodEater = require("./FoodEater.js");
-//var DataLine = require("./DataLine.js");
-
 
 function convertTestDataToSingleLine(data) {
     
@@ -23,7 +20,7 @@ var usualLine =
     description: 'Some description',
     category:    'Видео',
     tags_line:   'Автоматизация тестирования, Java, Ruby',
-    submitter:   '@dzhariy',
+    submitter:   '@dzhariy'
 };
 
 var lineWithDoubleQuotesAtTheEndOfTitle = 
@@ -34,7 +31,7 @@ var lineWithDoubleQuotesAtTheEndOfTitle =
     description: 'Some description',
     category:    'Видео',
     tags_line:   'Автоматизация тестирования, Java, Ruby',
-    submitter:   '@dzhariy',
+    submitter:   '@dzhariy'
 };
 
 var lineWithDoubleQuotesAtTheBegginingOfTitle = 
@@ -45,7 +42,7 @@ var lineWithDoubleQuotesAtTheBegginingOfTitle =
     description: 'Some description',
     category:    'Видео',
     tags_line:   'Автоматизация тестирования, Java, Ruby',
-    submitter:   '@dzhariy',
+    submitter:   '@dzhariy'
 };
 
 var lineStartsFromQuotedString = 
@@ -56,7 +53,7 @@ var lineStartsFromQuotedString =
     description: 'Some description',
     category:    'Видео',
     tags_line:   'Автоматизация тестирования, Java, Ruby',
-    submitter:   '@dzhariy',
+    submitter:   '@dzhariy'
 };
 
 var lineWithMultilineComments = 
@@ -70,7 +67,7 @@ var lineWithMultilineComments =
     
     category:    'Видео',
     tags_line:   'Автоматизация тестирования, Java, Ruby',
-    submitter:   '@dzhariy',
+    submitter:   '@dzhariy'
 };
 
 var lineWithMultilineCommentsAndDoubleQuoteInsideAndApostrophes = 
@@ -85,7 +82,7 @@ var lineWithMultilineCommentsAndDoubleQuoteInsideAndApostrophes =
     
     category:    'Видео',
     tags_line:   'Автоматизация тестирования, Java, Ruby',
-    submitter:   '@dzhariy',
+    submitter:   '@dzhariy'
 };
 
 
@@ -97,7 +94,7 @@ var lineWithOneDoubleQuoteInTitleAndDescription =
     description: 'This is a line with double quotes. < " >',
     category:    'Видео',
     tags_line:   'Автоматизация тестирования, Java, Ruby',
-    submitter:   '@dzhariy',
+    submitter:   '@dzhariy'
 };
 
 var lineWithDoubleQuotesAtStartAndTheEndOfTitle = 
@@ -108,7 +105,7 @@ var lineWithDoubleQuotesAtStartAndTheEndOfTitle =
     description: 'This is a line with double quotes. < " >',
     category:    'Видео',
     tags_line:   'Автоматизация тестирования, Java, Ruby',
-    submitter:   '@dzhariy',
+    submitter:   '@dzhariy'
 };
 
 
@@ -125,7 +122,6 @@ function verifyData(actualData, expectedData) {
 var DESCRIPTION_FIELD_INDEX = 3;
 var TITLE_FIELD_INDEX = 1;
 var NUMBER_OF_FIELDS = 7;
-
 
 describe('FoodEater', function() {
 
@@ -144,8 +140,6 @@ describe('FoodEater', function() {
         
         var actualData = actualLines[0].split("\t");
         expect(actualData[DESCRIPTION_FIELD_INDEX]).toBe(expected);
-        
-        
     });    
     
     it("NormalizeDataLines should handle the apostrophes in the multiline comments ", function() {
@@ -160,7 +154,7 @@ describe('FoodEater', function() {
         var expectedDescription = 'When I\'d write a text...\n\
 - I\'d always put the letters inside\n\
 - I\'d may make it multiline\n\
-- When I want to quote someone, ""I just do it""' 
+- When I want to quote someone, ""I just do it""';
                 
         var actualData = actualLines[0].split("\t");
         
@@ -183,7 +177,7 @@ describe('FoodEater', function() {
         var expectedDescription1 = 'When I\'d write a text...\n\
 - I\'d always put the letters inside\n\
 - I\'d may make it multiline\n\
-- When I want to quote someone, ""I just do it""' 
+- When I want to quote someone, ""I just do it""';
                          
         var actualData1 = actualLines[0].split("\t");
         
@@ -204,30 +198,34 @@ describe('FoodEater', function() {
         var actualData = actualLines[0].split("\t");
         expect(actualData[TITLE_FIELD_INDEX]).toBe(expected);
         
-        
     });   
     
     it("eatData should correctly parse and fill the DataLine from raw string", function() {
-              
        var line = convertTestDataToSingleLine(usualLine);
-       
        var foodEater = new FoodEater();
-
        var data = [ line ];
-       
        var result = foodEater.eatData(data);
 
        expect(result).not.toBe([]);
-
        var actual = result[0];
-       
        verifyData(actual, usualLine);
-
 
    });
    
+    it("eatData should set the empty string value when the submitter value is skipped(empty) in the input data", function() {
+       var modifiedUsusalLine = JSON.parse(JSON.stringify(usualLine));
+       modifiedUsusalLine.submitter = void 0;
+        
+       var line = convertTestDataToSingleLine(modifiedUsusalLine);
+       var foodEater = new FoodEater();
+       var data = [ line ];
+       var result = foodEater.eatData(data);
 
-   
+       expect(result).not.toBe([]);
+       var actual = result[0];
+       expect(actual.submitter).toBe("");
+
+   });   
 });
 
 

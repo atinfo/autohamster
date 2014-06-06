@@ -9,26 +9,61 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="hello.js"></script>
+        <script src="DataLine.js"></script>
+        <script src="FoodEater.js"></script>
         <style>
-            #sourceData {
-                width: 90%;
-                height: 100pt;
+            #txtSourceData {
+                width: 95%;
+                height: 200pt;
+                border: 2px solid black;
                 
             }
         </style>
+
+        <script>
+        function process()
+        {
+           var txtSourceData = document.getElementById("txtSourceData");
+           var foodEater = new FoodEater();
+           
+           var content = txtSourceData.value;
+           var NUMBER_OF_FIELDS = 7;
+           var rawLines = foodEater.NormalizeDataLines(content, NUMBER_OF_FIELDS);
+           
+           var dataLineItems = foodEater.eatData(rawLines);
+           
+           var str = JSON.stringify(dataLineItems, null, 4);
+           document.getElementById("groupPreview").innerHTML = "<pre>" + str + "</pre>";
+           
+           
+        }
+            
+        </script>
         
     </head>
     <body>
+        <h1>Why there are no space when I copy columns from google docs in chrome and the description is empty?</h1>
         
-        <div>TODO write content</div>
-        <textarea id="sourceData"></textarea>
+        <div>Raw Data from Google Spreadsheet</div>
+        <textarea id="txtSourceData">
+30.05.2014 2:06:51	Selenium - автоматизация веб-браузеров - Интерация JUnit и TestNG со средами разработки IDEA, Eclipse и NetBeans	http://selenium2.ru/news/115-interatsiya-junit-i-testng-so-sredami-razrabotki-idea-eclipse-i-netbeans.html	Видео	Java	@dzhariy
+03.06.2014 2:15:05	Released version 1.0.0 with Javascript test runner | Galen Framework	http://galenframework.com/post/2014-06-02-released-version-1.0.0-with-javascript-test-runner/	Layout testing framework for websites	Инструмент (приложение, проект, продукт)	WebDriver, Web, Layout, JavaScript	@dzhariy
+03.06.2014 11:00:52	Code Thrill: Integrating jQuery With Selenium	http://www.code-thrill.com/2012/04/integrating-jquery-with-selenium.html	Статья на английском	JavaScript	@dzhariy            
+
+        </textarea>
+        <div>
+            <button id="btnProcess" onclick="process()">Process</button>
+        </div>
+        <h3>Preview</h3>
+        <div id="groupPreview">
             
-        
-        <script>
-        
+        </div>        
+        <h3>Result</h3>        
+        <div id="groupResult">
             
-        </script>
+        </div>
+        
+
         
     </body>
 </html>
